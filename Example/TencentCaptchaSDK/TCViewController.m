@@ -8,7 +8,11 @@
 
 #import "TCViewController.h"
 
-@interface TCViewController ()
+@import TencentCaptchaSDK;
+
+@interface TCViewController ()<TCCaptchaViewDelegate>
+
+@property (nonatomic, strong) TencentCaptchaSDK  *tcSDK;
 
 @end
 
@@ -17,14 +21,31 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = UIColor.cyanColor;
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.backgroundColor = UIColor.cyanColor;
+    btn.frame = CGRectMake(0, 0, 100, 100);
+    btn.center = self.view.center;
+    [self.view addSubview:btn];
+    
+    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+    _tcSDK = [TencentCaptchaSDK shareInstance];
+    _tcSDK.appId = @"your appid";
+    _tcSDK.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)tcWebCodeWillShow {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+- (void)tcWebCodeDidHide {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+- (void)btnClick:(id)sender {
+    [_tcSDK startVerifyCompletion:^(BOOL successed, NSString * _Nullable ticket, NSString * _Nullable randStr) {
+        NSLog(@"success = %@, ticket = %@, randStr = %@", @(successed), ticket, randStr);
+    }];
 }
 
 @end

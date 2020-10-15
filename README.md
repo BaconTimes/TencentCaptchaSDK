@@ -20,6 +20,28 @@ it, simply add the following line to your Podfile:
 pod 'TencentCaptchaSDK'
 ```
 
+# Usage
+
+Import the framework:
+
+`@import TencentCaptchaSDK;`
+
+Then, initiaze the instance of TencentCaptchaSDK and set the property of appId, you can register an account in Tencent Open Developer Platform and request for a appId:
+
+`
+
+TencentCaptchaSDK *tcSDK = [TencentCaptchaSDK shareInstance];
+
+  tcSDK.appId = @"your appid";
+
+  [tcSDK startVerifyCompletion:^(**BOOL** successed, NSString * **_Nullable** ticket, NSString * **_Nullable** randStr) {
+
+​    NSLog(@"success = %@, ticket = %@, randStr = %@", @(successed), ticket, randStr);
+
+  }];
+
+`
+
 ## Author
 
 lipeigen, ch3coohna@qq.com
