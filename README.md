@@ -38,7 +38,7 @@ tcSDK.appId = @"your appid";
 
 and you will the image like this:  
 
-![image](https://gitee.com/EnjoyCodeing/pic/raw/master/baconimg/QQ20201015-140331@2x.png)
+![image](https://gitee.com/EnjoyCodeing/pic/raw/master/baconimg/QQ20201015-140331@2x 2.png)
 
 ## Author
 
