@@ -1,9 +1,7 @@
 # TencentCaptchaSDK
-
-[![CI Status](https://img.shields.io/travis/lipeigen/TencentCaptchaSDK.svg?style=flat)](https://travis-ci.org/lipeigen/TencentCaptchaSDK)
-[![Version](https://img.shields.io/cocoapods/v/TencentCaptchaSDK.svg?style=flat)](https://cocoapods.org/pods/TencentCaptchaSDK)
-[![License](https://img.shields.io/cocoapods/l/TencentCaptchaSDK.svg?style=flat)](https://cocoapods.org/pods/TencentCaptchaSDK)
-[![Platform](https://img.shields.io/cocoapods/p/TencentCaptchaSDK.svg?style=flat)](https://cocoapods.org/pods/TencentCaptchaSDK)
+![Build Status](https://img.shields.io/badge/pod-0.1.0-blue.svg)
+![Build Status](https://img.shields.io/badge/platform-iOS-dark.svg)
+![Build Status](https://img.shields.io/badge/build-success-green.svg)
 
 ## Example
 
@@ -23,28 +21,27 @@ pod 'TencentCaptchaSDK'
 # Usage
 
 Import the framework:
-
-`@import TencentCaptchaSDK;`
+```
+@import TencentCaptchaSDK;
+```
 
 Then, initiaze the instance of TencentCaptchaSDK and set the property of appId, you can register an account in Tencent Open Developer Platform and request for a appId:
 
-`
 
+```
 TencentCaptchaSDK *tcSDK = [TencentCaptchaSDK shareInstance];
+tcSDK.appId = @"your appid";
+[tcSDK startVerifyCompletion:^(BOOL successed, NSString * _Nullable ticket, NSString * _Nullable randStr) {
+    NSLog(@"success = %@, ticket = %@, randStr = %@", @(successed), ticket, randStr);
+}];
+```
 
-  tcSDK.appId = @"your appid";
-
-  [tcSDK startVerifyCompletion:^(**BOOL** successed, NSString * **_Nullable** ticket, NSString * **_Nullable** randStr) {
-
-​    NSLog(@"success = %@, ticket = %@, randStr = %@", @(successed), ticket, randStr);
-
-  }];
-
-`
+and you will the image like this:
+![image](https://gitee.com/EnjoyCodeing/pic/raw/master/baconimg/QQ20201015-140331@2x.png)
 
 ## Author
 
-lipeigen, ch3coohna@qq.com
+Bacon, ch3coohna@qq.com
 
 ## License
 
