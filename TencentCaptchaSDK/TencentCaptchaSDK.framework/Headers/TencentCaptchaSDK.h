@@ -16,10 +16,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *appId;
 
+/// 用于验证码展示前后回调的delegate
 @property (nonatomic, weak) id <TCCaptchaViewDelegate> delegate;
 
 + (instancetype)shareInstance;
 
+/// 开始验证
+/// @param completion 验证的回调
 - (void)startVerifyCompletion:(TCWebCodeResultCallback)completion;
 
 @end
