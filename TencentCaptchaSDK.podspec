@@ -21,17 +21,18 @@ Pod::Spec.new do |s|
 对腾讯图形验证码的简易封装，便于集成.
                        DESC
 
-  s.homepage         = 'https://github.com/lipeigen/TencentCaptchaSDK'
+  s.homepage         = 'https://github.com/BaconTimes/TencentCaptchaSDK'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'lipeigen' => 'ch3coohna@qq.com' }
-  s.source           = { :git => 'https://github.com/lipeigen/TencentCaptchaSDK.git', :tag => s.version.to_s }
+  s.author           = { 'Bacon' => 'ch3coohna@qq.com' }
+  s.source           = { :git => 'https://github.com/BaconTimes/TencentCaptchaSDK.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.platform = :ios
+  s.ios.deployment_target = '9.0'
 
-  s.ios.deployment_target = '8.0'
+#  s.source_files = 'TencentCaptchaSDK/Classes/**/*'
+  s.vendored_frameworks = 'TencentCaptchaSDK/TencentCaptchaSDK.framework'
 
-  s.source_files = 'TencentCaptchaSDK/Classes/**/*'
-  
   # s.resource_bundles = {
   #   'TencentCaptchaSDK' => ['TencentCaptchaSDK/Assets/*.png']
   # }

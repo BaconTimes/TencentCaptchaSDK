@@ -24,6 +24,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		D1E7B3DC25370B470096B379 /* TencentCaptchaSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E7B3DB25370B470096B379 /* TencentCaptchaSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF0142C14683D1FCD9188F8E /* Pods_TencentCaptchaSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TencentCaptchaSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C574C545FFAF423E46028E71 /* Pods-TencentCaptchaSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TencentCaptchaSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-TencentCaptchaSDK_Tests/Pods-TencentCaptchaSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D1E7B3DB25370B470096B379 /* TencentCaptchaSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentCaptchaSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
+				D1E7B3DC25370B470096B379 /* TencentCaptchaSDK.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				102B2292175FD1EC384AB4C6 /* Pods_TencentCaptchaSDK_Example.framework in Frameworks */,
@@ -178,6 +181,7 @@
 		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				D1E7B3DA25370B470096B379 /* TencentCaptchaSDK */,
 				811AC6469AC98073FED4E780 /* TencentCaptchaSDK.podspec */,
 				3F8F93EB354842414171CFB3 /* README.md */,
 				19B118BB188F24EA023EF4FE /* LICENSE */,
@@ -196,6 +200,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D1E7B3DA25370B470096B379 /* TencentCaptchaSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D1E7B3DB25370B470096B379 /* TencentCaptchaSDK.framework */,
+			);
+			name = TencentCaptchaSDK;
+			path = ../TencentCaptchaSDK;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -207,7 +220,6 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				66B3BC6181E3E9CF7C057A16 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -337,24 +349,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		66B3BC6181E3E9CF7C057A16 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TencentCaptchaSDK_Example/Pods-TencentCaptchaSDK_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/TencentCaptchaSDK/TencentCaptchaSDK.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TencentCaptchaSDK.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TencentCaptchaSDK_Example/Pods-TencentCaptchaSDK_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -494,6 +488,7 @@
 			baseConfigurationReference = 050664553CE405B4463D3F5D /* Pods-TencentCaptchaSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../TencentCaptchaSDK";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TencentCaptchaSDK/TencentCaptchaSDK-Prefix.pch";
 				INFOPLIST_FILE = "TencentCaptchaSDK/TencentCaptchaSDK-Info.plist";
@@ -510,6 +505,7 @@
 			baseConfigurationReference = 054B7E39404CF2EE6523B350 /* Pods-TencentCaptchaSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../TencentCaptchaSDK";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TencentCaptchaSDK/TencentCaptchaSDK-Prefix.pch";
 				INFOPLIST_FILE = "TencentCaptchaSDK/TencentCaptchaSDK-Info.plist";

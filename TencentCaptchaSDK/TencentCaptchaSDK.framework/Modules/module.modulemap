@@ -1,0 +1,6 @@
+framework module TencentCaptchaSDK {
+  umbrella header "TencentCaptchaSDK.h"
+
+  export *
+  module * { export * }
+}
