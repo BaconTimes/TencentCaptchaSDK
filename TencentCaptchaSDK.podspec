@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TencentCaptchaSDK'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = '对腾讯图形验证码的封装.'
 
 # This description is used to generate tags and improve search results.
