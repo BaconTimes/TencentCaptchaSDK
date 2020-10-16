@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TencentCaptchaSDK'
-  s.version          = '0.2.1'
+  s.version          = '0.2.2'
   s.summary          = '对腾讯图形验证码的封装.'
 
 # This description is used to generate tags and improve search results.
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
 
 #  s.source_files = 'TencentCaptchaSDK/Classes/**/*'
   s.vendored_frameworks = 'TencentCaptchaSDK/TencentCaptchaSDK.framework'
-  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   # s.resource_bundles = {
   #   'TencentCaptchaSDK' => ['TencentCaptchaSDK/Assets/*.png']
   # }
