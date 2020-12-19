@@ -1,5 +1,5 @@
 # TencentCaptchaSDK
-![Build Status](https://img.shields.io/badge/pod-0.1.0-blue.svg)
+![Build Status](https://img.shields.io/badge/pod-0.3.0-blue.svg)
 ![Build Status](https://img.shields.io/badge/platform-iOS-dark.svg)
 ![Build Status](https://img.shields.io/badge/build-success-green.svg)
 
@@ -22,7 +22,7 @@ pod 'TencentCaptchaSDK'
 
 Import the framework:
 ```
-@import TencentCaptchaSDK;
+#import <TencentCaptchaSDK/TencentCaptchaSDK.h>
 ```
 
 Then, initiaze the instance of TencentCaptchaSDK and set the property of appId, you can register an account in Tencent Open Developer Platform and request for a appId:
